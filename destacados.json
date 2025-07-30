@@ -1,0 +1,55 @@
+ { 
+  "products": [
+    {
+      "id": 1,
+      "name": "pulsera cristal",
+      "image": "imagenes/pulseras-cristales.jpg",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Collar Rojo",
+      "image": "imagenes/pulsera-multicolor.jpg",
+      "price": 12
+    },
+    {
+      "id": 2,
+      "name": "Collar Rojo",
+      "image": "imagenes/collares.jpg",
+      "price": 12
+    },{
+      "id": 1,
+      "name": "pulsera cristal",
+      "image": "imagenes/pulseras-cristales.jpg",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Collar Rojo",
+      "image": "imagenes/pulsera-multicolor.jpg",
+      "price": 12
+    },
+    {
+      "id": 2,
+      "name": "Collar Rojo",
+      "image": "imagenes/collares.jpg",
+      "price": 12
+    },{
+      "id": 1,
+      "name": "pulsera cristal",
+      "image": "imagenes/pulseras-cristales.jpg",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Collar Rojo",
+      "image": "imagenes/pulsera-multicolor.jpg",
+      "price": 12
+    },
+    {
+      "id": 2,
+      "name": "Collar Rojo",
+      "image": "imagenes/collares.jpg",
+      "price": 12
+    }
+]}
