@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Finalizar compra</h1>
+
+    <div>
+        <label for="">correo electronico</label>
+        <input type="email">
+    </div>
+    <div>
+        <input type="text" id="codigoPostal" placeholder="Código Postal" required />
+        <p id="costoEnvio"></p>
+    </div>
+    <div>
+        <label for="">Metodo de pago"></label>
+        <input type="text" name="" id="opciones">
+        <datalist id="opciones">
+            <option value="efectivo">Efectivo</option>
+            <option value="mercado pago">mercado pago</option>
+        </datalist>
+    </div>
+    <button class="finalizar-compra" id="finalizar-compra">Finalizar compra</button>
+    <script src="checkout.js"></script>
+</body>
+</html>

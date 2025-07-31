@@ -1,0 +1,26 @@
+{
+  "name": "pagina-atria-accesorios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "carrito.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pancha04/pagina-atria-accesorios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pancha04/pagina-atria-accesorios/issues"
+  },
+  "homepage": "https://github.com/pancha04/pagina-atria-accesorios#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5"
+  }
+}

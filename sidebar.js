@@ -1,9 +1,9 @@
-fetch('sidebar.html')
+document.addEventListener("DOMContentLoaded", ()=>{
+    fetch('sidebar.html')
     .then(res => res.text())
     .then(html => {
     document.getElementById('sidebar__wrapper').innerHTML = html
 
-    // Esperamos que el header haya sido insertado también
     const waitForToggle = () => {
         const toggle = document.getElementById('menu-toggle')
         const menu = document.getElementById('side-menu')
@@ -36,3 +36,4 @@ fetch('sidebar.html')
     waitForToggle()
     })
     .catch(err => console.error('❌ Error cargando sidebar:', err))
+})

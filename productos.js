@@ -29,7 +29,7 @@ function renderizarProductos(productos, IDcontenedor) {
     });
 }
 
-fetch('db.json')
+fetch(`db.json?timestamp=${Date.now()}`)
   .then(res => res.json())
   .then(data => {
     renderizarProductos(data.products, 'products')
@@ -37,7 +37,7 @@ fetch('db.json')
   .catch(err => console.error('Error cargando todos los productos:', err))
 
 
-fetch('destacados.json')
+fetch(`destacados.json?timestamp=${Date.now()}`)
   .then(res => res.json())
   .then(data => {
     const destacados=data.products

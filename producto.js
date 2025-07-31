@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search)
 const id = params.get("id")
 
-fetch('db.json')
+fetch(`db.json?timestamp=${Date.now()}`)
   .then(res => res.json())
   .then(data => {
     const productos = data.products
@@ -61,6 +61,32 @@ fetch('db.json')
       currentIndex = (currentIndex + 1) % images.length
       track.style.transform = `translateX(-${currentIndex * 100}%)`
     })
+
+    const btnAgregar = document.querySelector('.btn-agregar')
+    btnAgregar.addEventListener('click', () => {
+    const cantidad = parseInt(document.getElementById('cantidad').value) || 1
+
+    const productoCarrito = {
+      id: producto.id,
+      name: producto.name,
+      price: producto.price,
+      image: producto.image,
+      cantidad
+    }
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || []
+
+    const existente = carrito.find(item => item.id === producto.id)
+
+    if (existente) {
+      existente.cantidad += cantidad
+    } else {
+      carrito.push(productoCarrito)
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    alert('🛒 Producto agregado al carrito')
+})
   })
   .catch(err => {
     console.error('Error al cargar el JSON:', err)
