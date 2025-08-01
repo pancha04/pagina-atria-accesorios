@@ -477,6 +477,7 @@ header{
   font-size: 14px;
   box-sizing: border-box;
 }
+
 @media screen and (min-width: 768px) {
   .product__container-grid{
     margin: 40px 200px;

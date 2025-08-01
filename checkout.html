@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <title>Finalizar compra</title>
 </head>
 <body>
+
     <h1>Finalizar compra</h1>
 
     <div>
-        <label for="">correo electronico</label>
-        <input type="email">
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" required>
     </div>
+
     <div>
+        <label for="codigoPostal">Código Postal</label>
         <input type="text" id="codigoPostal" placeholder="Código Postal" required />
         <p id="costoEnvio"></p>
     </div>
+
     <div>
-        <label for="">Metodo de pago"></label>
-        <input type="text" name="" id="opciones">
-        <datalist id="opciones">
+        <label for="metodoPago">Método de pago</label>
+        <select id="metodoPago">
             <option value="efectivo">Efectivo</option>
-            <option value="mercado pago">mercado pago</option>
-        </datalist>
+            <option value="mercado pago">Mercado pago</option>
+        </select>
     </div>
-    <button class="finalizar-compra" id="finalizar-compra">Finalizar compra</button>
+
+    <button class="finalizar-compra" id="confirmarCompra">Finalizar compra</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="checkout.js"></script>
 </body>
 </html>

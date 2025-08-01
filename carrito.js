@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
     const contenedor=document.getElementById("cart-container");
     const totalDOM = document.getElementById("cart-total") 
-    const finalizarBtn = document.getElementById('finalizar-compra')
+    const iniciarBtn = document.getElementById('iniciar-compra')
 
     function renderCarrito() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || []
@@ -85,10 +85,9 @@ document.addEventListener("DOMContentLoaded",()=>{
         localStorage.setItem('carrito', JSON.stringify(carrito))
         renderCarrito()
     }
-    finalizarBtn.addEventListener('click', () => {
+    iniciarBtn.addEventListener('click', () => {
         const carrito = JSON.parse(localStorage.getItem('carrito')) || []
         window.location.href = 'checkout.html'
-        localStorage.removeItem('carrito')
         renderCarrito()
     })
     renderCarrito();
