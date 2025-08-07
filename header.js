@@ -7,10 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
       setTimeout(() => {
         const carritoIcono = document.getElementById('cart-icon')
-        if (!carritoIcono) {
-          console.warn('⚠️ cart-icon no encontrado en el header')
-          return
-        }
 
         carritoIcono.addEventListener('click', () => {
           window.location.href = 'carrito.html'

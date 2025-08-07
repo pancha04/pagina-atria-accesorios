@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const sideMenu = document.getElementById('side-menu')
     const overlay = document.getElementById('overlay')
 
-    console.log({ menuToggle, sideMenu, overlay })
-
     if (menuToggle && sideMenu && overlay) {
     menuToggle.addEventListener('click', () => {
         console.log('🔥 BOTÓN CLICKEADO')

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         const toggle = document.getElementById('menu-toggle')
         const menu = document.getElementById('side-menu')
         const overlay = document.getElementById('overlay')
+        menuPulseras=document.getElementById("menu-pulseras")
 
         if (toggle && menu && overlay) {
             console.log('✅ Elementos encontrados')

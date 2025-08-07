@@ -1,7 +1,8 @@
 const params = new URLSearchParams(window.location.search)
 const id = params.get("id")
+const categoria_url = params.get("cat");
 
-fetch(`db.json?timestamp=${Date.now()}`)
+fetch(`${categoria_url}.json?timestamp=${Date.now()}`)
   .then(res => res.json())
   .then(data => {
     const productos = data.products

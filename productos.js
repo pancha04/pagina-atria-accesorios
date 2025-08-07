@@ -1,4 +1,11 @@
-
+const paginaActual = window.location.pathname.split('/').pop();
+    const mapeoCategorias={
+      'collares.html': 'collares.json',
+      'pulseras.html': 'pulseras.json',
+      'index.html': 'destacados.json'
+    }
+    const jsonArchivo = mapeoCategorias[paginaActual];
+    const categoria =  jsonArchivo.replace('.json', '');
 function crearProducto(producto){
     const div= document.createElement('div')
     div.className = 'producto'
@@ -8,10 +15,10 @@ function crearProducto(producto){
         <img src="${producto.image}" alt="">
     </div>
     <span class="product-name">${producto.name}</span>
-    <span class="product-price">${producto.price}</span>
+    <span class="product-price">$${producto.price}</span>
     `
     div.addEventListener('click', () => {
-        window.location.href = `producto.html?id=${producto.id}`;
+        window.location.href = `producto.html?id=${producto.id}&cat=${categoria}`;
     });
     return div
 }
@@ -29,7 +36,7 @@ function renderizarProductos(productos, IDcontenedor) {
     });
 }
 
-fetch(`db.json?timestamp=${Date.now()}`)
+fetch(`${jsonArchivo}?timestamp=${Date.now()}`)
   .then(res => res.json())
   .then(data => {
     renderizarProductos(data.products, 'products')
@@ -37,7 +44,7 @@ fetch(`db.json?timestamp=${Date.now()}`)
   .catch(err => console.error('Error cargando todos los productos:', err))
 
 
-fetch(`destacados.json?timestamp=${Date.now()}`)
+fetch(`${jsonArchivo}?timestamp=${Date.now()}`)
   .then(res => res.json())
   .then(data => {
     const destacados=data.products

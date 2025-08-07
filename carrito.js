@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     const contenedor=document.getElementById("cart-container");
     const totalDOM = document.getElementById("cart-total") 
     const iniciarBtn = document.getElementById('iniciar-compra')
+    console.log("iniciarBtn:", iniciarBtn); 
 
     function renderCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || []
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || []
+    
+    carrito=carrito.filter(p=>p.cantidad>0);
+    localStorage.setItem("carrito",JSON.stringify(carrito))
 
     contenedor.innerHTML = ''
     let total = 0
@@ -12,6 +16,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     if (carrito.length === 0) {
         contenedor.innerHTML = '<p>El carrito está vacío.</p>'
         totalDOM.remove()
+        iniciarBtn.remove()
         return
     }
 
