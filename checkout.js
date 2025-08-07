@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const metodoPago = metodoPagoInput.value;
         const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-        if (!email || !carrito.length || !codigoPostal) {
+        if (!email || !carrito.length) {
             alert("Por favor completá todos los campos y agregá productos al carrito.");
             return;
         }
